@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+/* HEADER */
+.header {
+    padding: 20px;
+    text-align: center;
+    background: #573dec;
+    color: white;
+    font-size: 24px;
+}
+
+/* PAGE CONTENT */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+.content > #app-form > #url-input {
+    font-size: 36px;
+    text-align: center;
+}
+
+.content > #app-form > #submit-button {
+    margin-top: 20px;
+}
+
+/* FOOTER */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-left: 5px;
+    background: #573dec;
+    color: white;
+}
+
+#github-url {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    top: 1px;
+}
+
+#github-url:hover {
+    color: rgb(170, 170, 170);
+}
