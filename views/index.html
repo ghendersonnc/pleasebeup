@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Is It Down?</title>
+  <title>Please Be Up</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="shortcut icon" href="favicon.png">
   <link rel="stylesheet" href="styles/default.css">
@@ -11,14 +11,14 @@
 <body>
   <div class="header">
     <div id="title-div">
-      <h1 id="title-heading">Is It Down?</h1>
+      <h1 id="title-heading">Please Be Up</h1>
     </div>
   </div>
   <div class="content">
-    <form id="app-form" action="#" method="GET" onsubmit="checkInput(event)">
-      <input id="url-input" type="text" placeholder="website.com">
+    <form id="app-form" action="/submit" onsubmit="checkInput(event)">
+      <input id="url-input" name="url" type="text" placeholder="website.com">
       <br>
-      <input id="submit-button" type="submit" value="Is It Down?">
+      <input id="submit-button" type="submit" value="Please Be Up">
     </form>
   </div>
   <div class="footer">

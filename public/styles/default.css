@@ -21,10 +21,12 @@ body {
 .content > #app-form > #url-input {
     font-size: 36px;
     text-align: center;
+    border: none;
 }
 
 .content > #app-form > #submit-button {
     margin-top: 20px;
+    font-size: large;
 }
 
 /* FOOTER */

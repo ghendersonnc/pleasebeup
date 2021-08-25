@@ -9,7 +9,9 @@
   "author": "ghendersonnc",
   "license": "ISC",
   "dependencies": {
-    "nodemon": "^2.0.12"
+    "nodemon": "^2.0.12",
+    "request": "^2.88.2",
+    "xmlhttprequest": "^1.8.0"
   },
   "devDependencies": {
     "express": "^4.17.1"
