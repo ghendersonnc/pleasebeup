@@ -9,6 +9,8 @@
   "author": "ghendersonnc",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.21.1",
+    "ejs": "^3.1.6",
     "nodemon": "^2.0.12",
     "request": "^2.88.2",
     "xmlhttprequest": "^1.8.0"
