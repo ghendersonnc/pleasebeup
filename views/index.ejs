@@ -9,11 +9,8 @@
   <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-  <div class="header">
-    <div id="title-div">
-      <h1 id="title-heading">Please Be Up</h1>
-    </div>
-  </div>
+
+  <%- include("./partials/header.ejs") %>
   <div class="content">
     <form id="app-form" action="/submit" onsubmit="checkInput(event)">
       <input id="url-input" name="url" type="text" placeholder="website.com">
@@ -21,9 +18,10 @@
       <input id="submit-button" type="submit" value="Please Be Up">
     </form>
   </div>
-  <div class="footer">
+  <!-- <div class="footer">
       <p>hello :) <span id="github-url" ><a id="github-url" href="https://github.com/ghendersonnc/pleasebeup" target="_blank"><i class="fa fa-github" style="font-size: 24px"></i></a></span></p>
-  </div>
+  </div> -->
+  <%- include("./partials/footer.ejs") %>
   <script src="scripts/regex.js"></script>
 </body>
 </html>

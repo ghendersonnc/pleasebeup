@@ -5,7 +5,6 @@ const PORT = 3000;
 
 const app = express();
 
-
 // view engine
 app.set("view engine", "ejs");
 
@@ -13,9 +12,6 @@ app.listen(PORT);
 
 // use static files
 app.use(express.static(`${__dirname}/public`));
-
-// app.use(express.static(__dirname + '/views'));
-
 
 app.get("/", (req, res) => {
     return res.render("index");
@@ -30,7 +26,7 @@ app.get("/submit", (req, res) => {
         var url = req.query['url'];
 
     }
-    console.log(url);
+
     request(url, {json: false}, (err, response, body) => {
         if (err) {
             res.render("doesnotexist");
