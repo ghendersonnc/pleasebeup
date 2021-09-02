@@ -1,5 +1,3 @@
 # Please Be Up
 
-Currently only checks if the site exists or not rather than it being up.
-
-Need to figure out how to use the statusCode in the response to actually display a proper response to the user.
+Will tell you if the website exists and what status code it returns. As long it is 200, 404, or 500.
