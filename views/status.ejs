@@ -16,9 +16,8 @@
 
     <button onclick="redirect()">Back to Home</button>
   </div>
-  <div class="footer">
-    <p>hello :) <span id="github-url" ><a id="github-url" href="https://github.com/ghendersonnc/pleasebeup" target="_blank"><i class="fa fa-github" style="font-size: 24px"></i></a></span></p>
-  </div>
+
+  <%- include("./partials/footer.ejs") %>
   <script>
     function redirect() {
       window.location = "/";

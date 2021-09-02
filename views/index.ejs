@@ -9,8 +9,8 @@
   <link rel="stylesheet" href="styles/default.css">
 </head>
 <body>
-
   <%- include("./partials/header.ejs") %>
+
   <div class="content">
     <form id="app-form" action="/submit" onsubmit="checkInput(event)">
       <input id="url-input" name="url" type="text" placeholder="website.com">
@@ -18,9 +18,7 @@
       <input id="submit-button" type="submit" value="Please Be Up">
     </form>
   </div>
-  <!-- <div class="footer">
-      <p>hello :) <span id="github-url" ><a id="github-url" href="https://github.com/ghendersonnc/pleasebeup" target="_blank"><i class="fa fa-github" style="font-size: 24px"></i></a></span></p>
-  </div> -->
+
   <%- include("./partials/footer.ejs") %>
   <script src="scripts/regex.js"></script>
 </body>
