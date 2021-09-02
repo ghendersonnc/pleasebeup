@@ -14,28 +14,13 @@
     </div>
   </div>
   <div class="content">
-    <h1 id="message"></h1>
-    <p id="sub"></p>
-    <script>
-      var statusCode = "<%= statusCode %>";
-      var url = "<%= url %>";
-      var message = document.getElementById("message");
-      var sub = document.getElementById("sub");
-      if (statusCode === "200") {
-        message.innerHTML = `Good news, everyone! ${url} sent back a ${statusCode} status code`;
-      } else if (statusCode === "404") {
-        message.innerHTML = `Good news, everyone! ${url} sent back a ${statusCode} status code.`;
-        sub.innerHTML = "That means the website exists and is up, but the page you are looking for does not exist.";
-      } else if (statusCode === "500") {
-        message.innerHTML = `Good news, everyone! ${url} sent back a ${statusCode} status code.`;
-        sub.innerHTML = "That means the server we sent a request to is having problems.";
-      }
-    </script>
+    <h1 id="message"><%= message %></h1>
+    <p id="sub"><%= sub %></p>
 
     <button onclick="redirect()">Back to Home</button>
   </div>
   <div class="footer">
-    <p>hello :) <span id="github-url" ><a id="github-url" href="https://github.com/ghendersonnc" target="_blank"><i class="fa fa-github" style="font-size: 24px"></i></a></span></p>
+    <p>hello :) <span id="github-url" ><a id="github-url" href="https://github.com/ghendersonnc/pleasebeup" target="_blank"><i class="fa fa-github" style="font-size: 24px"></i></a></span></p>
   </div>
   <script>
     function redirect() {

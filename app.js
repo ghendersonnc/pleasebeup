@@ -37,8 +37,21 @@ app.get("/submit", (req, res) => {
             return;
         }
 
-        console.log(response.statusCode);
-        res.render("status", { statusCode: response.statusCode, url: url });
+        if (response.statusCode === 200) {
+            var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
+            var sub = "That means it works.";
+        } else if (response.statusCode === 404) {
+            var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
+            var sub = "That means the website is up, but the page you are looking for does not exist."
+        } else if (response.statusCode === 500) {
+            var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
+            var sub = "That means the server we sent a request to is having problems.";
+        } else if (response.statusCode === 502) {
+            var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
+            var sub = "That means you a bad request was sent to the server.";
+        }
+
+        res.render("status", { message: message, sub: sub });
     });
 
 });

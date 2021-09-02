@@ -28,6 +28,44 @@ body {
 .content > #app-form > #submit-button {
     margin-top: 20px;
     font-size: large;
+    border: none;
+    background: #573dec;
+    color: white;
+    padding: 12px;
+    box-shadow: 0 0px 10px 0 black;
+
+}
+
+.content > #app-form > #submit-button:hover {
+    margin-top: 20px;
+    font-size: large;
+    border: none;
+    background: #4e36d3;
+    color: white;
+    padding: 12px;
+    box-shadow: 0 0px 15px 0 black;
+
+}
+
+
+button {
+    font-size: large;
+    border: none;
+    background: #573dec;
+    color: white;
+    padding: 12px;
+    box-shadow: 0 0px 10px 0 black;
+
+}
+
+button:hover {
+    font-size: large;
+    border: none;
+    background: #4e36d3;
+    color: white;
+    padding: 12px;
+    box-shadow: 0 0px 15px 0 black;
+
 }
 
 /* FOOTER */
