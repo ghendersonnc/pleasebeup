@@ -29,23 +29,28 @@ app.get("/submit", (req, res) => {
 
     request(url, {json: false}, (err, response, body) => {
         if (err) {
-            res.render("doesnotexist");
-            return;
+            var message = `Good news, everyone! There was no response.`;
+            var sub = "That means the website probably does not exist or its webserver is down.";
+        } else {
+            if (response.statusCode === 200) {
+                var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
+                var sub = "That means it works and that it is just you with the problem.";
+            } else if (response.statusCode === 403) {
+                var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
+                var sub = "That means the website is up and working, but the request sent by us was rejected.";
+            } else if (response.statusCode === 404) {
+                var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
+                var sub = "That means the website is up, but the page you are looking for does not exist."
+            } else if (response.statusCode === 500) {
+                var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
+                var sub = "That means the server we sent a request to is having problems.";
+            } else if (response.statusCode === 502) {
+                var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
+                var sub = "That means a bad request was sent to the server.";
+            }
         }
 
-        if (response.statusCode === 200) {
-            var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
-            var sub = "That means it works and that it is just you with the problem.";
-        } else if (response.statusCode === 404) {
-            var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
-            var sub = "That means the website is up, but the page you are looking for does not exist."
-        } else if (response.statusCode === 500) {
-            var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
-            var sub = "That means the server we sent a request to is having problems.";
-        } else if (response.statusCode === 502) {
-            var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
-            var sub = "That means you a bad request was sent to the server.";
-        }
+
 
         res.render("status", { message: message, sub: sub });
     });
