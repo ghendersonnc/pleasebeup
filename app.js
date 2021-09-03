@@ -1,7 +1,7 @@
 const express = require("express");
 const request = require("request");
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -35,7 +35,7 @@ app.get("/submit", (req, res) => {
 
         if (response.statusCode === 200) {
             var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
-            var sub = "That means it works.";
+            var sub = "That means it works and that it is just you with the problem.";
         } else if (response.statusCode === 404) {
             var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
             var sub = "That means the website is up, but the page you are looking for does not exist."
