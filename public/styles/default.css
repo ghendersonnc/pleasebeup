@@ -22,6 +22,11 @@ html, body {
 .content {
     padding: 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .content > #app-form > #url-input {
@@ -32,9 +37,15 @@ html, body {
     width: 75%;
 }
 
+.content > #app-form {
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+}
+
 .content > #app-form > #submit-button {
     margin-top: 20px;
-    font-size: large;
+    font-size: 24px;
     border: none;
     background: #573dec;
     color: white;
@@ -45,7 +56,7 @@ html, body {
 
 .content > #app-form > #submit-button:hover {
     margin-top: 20px;
-    font-size: large;
+    font-size: 24px;
     border: none;
     background: #4e36d3;
     color: white;
@@ -54,9 +65,14 @@ html, body {
 
 }
 
+.content > #description {
+    width: 50%;
+    margin-top: 20px;
+}
 
 button {
-    font-size: large;
+    margin-top: 20px;
+    font-size: 24px;
     border: none;
     background: #573dec;
     color: white;
@@ -66,7 +82,8 @@ button {
 }
 
 button:hover {
-    font-size: large;
+    margin-top: 20px;
+    font-size: 24px;
     border: none;
     background: #4e36d3;
     color: white;

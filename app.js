@@ -50,8 +50,6 @@ app.get("/submit", (req, res) => {
             }
         }
 
-
-
         res.render("status", { message: message, sub: sub });
     });
 

@@ -14,11 +14,14 @@
   <div class="content">
     <form id="app-form" action="/submit" onsubmit="checkInput(event)">
       <input id="url-input" name="url" type="text" placeholder="website.com" onfocus="this.placeholder=''" onblur="this.placeholder='website.com'" autocomplete="off">
-      <br>
+
       <input id="submit-button" type="submit" value="Please Be Up">
     </form>
+    <div id="description">
+      <p><strong>Please Be Up</strong> will check if a website is down or not. It will also display the returned status code and a short description about the status code.</p>
+    </div>
   </div>
-  
+
   <%- include("./partials/footer.ejs") %>
   <script src="scripts/regex.js"></script>
 </body>
