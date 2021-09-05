@@ -29,7 +29,7 @@ app.get("/submit", (req, res) => {
     }
 
     // Handle request to final url
-    request(url, {json: false, timeout: 8000, method: head}, (err, response, body) => {
+    request(url, {json: false, timeout: 8000}, (err, response, body) => {
 
         if (err) {
             var message = `Good news, everyone! There was no response or the request timed out.`;
