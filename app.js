@@ -1,4 +1,5 @@
 const express = require("express");
+const { head } = require("request");
 const request = require("request");
 
 const PORT = process.env.PORT || 5000;
@@ -27,10 +28,12 @@ app.get("/submit", (req, res) => {
 
     }
 
-    request(url, {json: false}, (err, response, body) => {
+    // Handle request to final url
+    request(url, {json: false, timeout: 8000, method: head}, (err, response, body) => {
+
         if (err) {
-            var message = `Good news, everyone! There was no response.`;
-            var sub = "That means the website probably does not exist or its webserver is down.";
+            var message = `Good news, everyone! There was no response or the request timed out.`;
+            var sub = "That means the website probably does not exist, the webserver is down, or the endpoint is blocking the app or app host";
         } else {
             if (response.statusCode === 200) {
                 var message = `Good news, everyone! ${url} sent back a ${response.statusCode} status code`;
